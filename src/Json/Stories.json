@@ -1,0 +1,92 @@
+[
+    {
+        "name": "sahil_124",
+        "image": "https://picsum.photos/800",
+        "newStory": true
+    },
+    {
+        "name": "john_doe",
+        "image": "https://picsum.photos/801",
+        "newStory": false
+    },
+    {
+        "name": "jane_doe",
+        "image": "https://picsum.photos/802",
+        "newStory": false
+    },
+    {
+        "name": "jack_smith",
+        "image": "https://picsum.photos/803",
+        "newStory": true
+    },
+    {
+        "name": "jill_smith",
+        "image": "https://picsum.photos/804",
+        "newStory": false
+    },
+    {
+        "name": "sarah_johnson",
+        "image": "https://picsum.photos/805",
+        "newStory": false
+    },
+    {
+        "name": "mike_johnson",
+        "image": "https://picsum.photos/806",
+        "newStory": true
+    },
+    {
+        "name": "emma_williams",
+        "image": "https://picsum.photos/807",
+        "newStory": false
+    },
+    {
+        "name": "david_williams",
+        "image": "https://picsum.photos/808",
+        "newStory": false
+    },
+    {
+        "name": "lisa_brown",
+        "image": "https://picsum.photos/809",
+        "newStory": true
+    },
+    {
+        "name": "brian_brown",
+        "image": "https://picsum.photos/810",
+        "newStory": false
+    },
+    {
+        "name": "samantha_davis",
+        "image": "https://picsum.photos/811",
+        "newStory": false
+    },
+    {
+        "name": "matt_davis",
+        "image": "https://picsum.photos/812",
+        "newStory": true
+    },
+    {
+        "name": "ashley_miller",
+        "image": "https://picsum.photos/813",
+        "newStory": false
+    },
+    {
+        "name": "ryan_miller",
+        "image": "https://picsum.photos/814",
+        "newStory": false
+    },
+    {
+        "name": "elizabeth_taylor",
+        "image": "https://picsum.photos/815",
+        "newStory": true
+    },
+    {
+        "name": "james_taylor",
+        "image": "https://picsum.photos/816",
+        "newStory": false
+    },
+    {
+        "name": "amber_moore",
+        "image": "https://picsum.photos/817",
+        "newStory": false
+    }
+]
