@@ -1,23 +1,19 @@
 import { StyleSheet, Text, View, FlatList, Image, TouchableOpacity, Dimensions } from 'react-native'
-import React from 'react'
+import React, { memo } from 'react'
 // import { FlashList } from '@shopify/flash-list';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
-import data from '../Json/Stories.json'
+import FastImage from 'react-native-fast-image'
 
-const Stories = () => {
+const StoriesCard = (props) => {
 
-    const renderItem = (item, index) => {
-        return (
-            <View style={styles.cardView} key={index}>
-                <TouchableOpacity style={styles.roundCard} activeOpacity={0.7}>
-                    <Image source={{ uri: item?.image }} style={styles.Image} />
-                </TouchableOpacity>
-                <Text style={styles.name} numberOfLines={1} ellipsizeMode='tail'>
-                    {item.name}
-                </Text>
-            </View>
-        )
-    }
+    const item = props.data?.item;
+    const index = props.data?.index;
+
+    // const renderItem = (item, index) => {
+    //     return (
+
+    //     )
+    // }
 
     const listHeaderView = () => {
         return (
@@ -37,18 +33,28 @@ const Stories = () => {
     }
 
     return (
-        <FlatList
-            data={data}
-            renderItem={({ item, index }) => renderItem(item, index)}
-            horizontal
-            showsHorizontalScrollIndicator={false}
-            ListHeaderComponent={listHeaderView}
-            initialNumToRender={10}
-        />
+        <>
+            {index === 0 && listHeaderView()}
+            <View style={styles.cardView} key={index}>
+                <TouchableOpacity style={styles.roundCard} activeOpacity={0.7} onPress={props.onPress}>
+                    <FastImage
+                        source={{
+                            uri: item?.image,
+                            cache: FastImage.cacheControl.immutable,
+                            // priority: FastImage.priority.low
+                        }}
+                        style={styles.Image}
+
+                    />
+                </TouchableOpacity>
+                <Text style={styles.name} numberOfLines={1} ellipsizeMode='tail'>
+                    {item.name}
+                </Text>
+            </View>
+        </>
     )
 }
-
-export default Stories
+export default memo(StoriesCard)
 
 const styles = StyleSheet.create({
     cardView: {

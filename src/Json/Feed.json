@@ -9,7 +9,126 @@
     {
         "name": "Entertainment",
         "image":"https://picsum.photos/800",
+        "postUrl":"https://d192a4z5wljn2.cloudfront.net/ervNPPeH/hoookedup/5940/carKLHoe0l.mp4",
+        "type":"video",
+        "likes" :100
+    },
+    {
+        "name": "Entertainment",
+        "image":"https://picsum.photos/805",
+        "postUrl":"https://d192a4z5wljn2.cloudfront.net/ervNPPeH/hoookedup/5199/avvytpAUuY.mp4",
+        "type":"video",
+        "likes" :100
+    },
+    {
+        "name": "India_TV",
+        "image":"https://picsum.photos/801",
+        "postUrl":"https://picsum.photos/801",
+        "type":"image",
+        "likes" :10
+    },
+    {
+        "name": "Hello_world",
+        "image":"https://picsum.photos/819",
+        "postUrl":"https://d192a4z5wljn2.cloudfront.net/ervNPPeH/hoookedup/5531/EiF5pagxWq.mp4",
+        "type":"video",
+        "likes" :100
+    },
+    {
+        "name": "Jay_01",
+        "image":"https://picsum.photos/802",
+        "postUrl":"https://picsum.photos/802",
+        "type":"image",
+        "likes" :0
+    },
+    {
+        "name": "Vishal_11",
+        "image":"https://picsum.photos/803",
+        "postUrl":"https://picsum.photos/803",
+        "type":"image",
+        "likes" :5000
+    },
+    {
+        "name": "corona",
+        "image":"https://picsum.photos/820",
         "postUrl":"https://d192a4z5wljn2.cloudfront.net/ervNPPeH/hoookedup/5702/Y0KLgnhIHh.mp4",
+        "type":"video",
+        "likes" :100
+    },
+    {
+        "name": "Wolvy112",
+        "image":"https://picsum.photos/804",
+        "postUrl":"https://picsum.photos/804",
+        "type":"image",
+        "likes" :2978
+    },
+    {
+        "name": "kaushal1",
+        "image":"https://picsum.photos/805",
+        "postUrl":"https://picsum.photos/805",
+        "type":"image",
+        "likes" :18
+    },
+    {
+        "name": "killBot",
+        "image":"https://picsum.photos/814",
+        "postUrl":"https://d192a4z5wljn2.cloudfront.net/ervNPPeH/hoookedup/5531/EiF5pagxWq.mp4",
+        "type":"video",
+        "likes" :100
+    },
+    {
+        "name": "Raj__",
+        "image":"https://picsum.photos/806",
+        "postUrl":"https://picsum.photos/806",
+        "type":"image",
+        "likes" :98
+    },
+    {
+        "name": "Hello_world",
+        "image":"https://picsum.photos/819",
+        "postUrl":"https://d192a4z5wljn2.cloudfront.net/ervNPPeH/hoookedup/5199/avvytpAUuY.mp4",
+        "type":"video",
+        "likes" :100
+    },
+    {
+        "name": "Jimi",
+        "image":"https://picsum.photos/807",
+        "postUrl":"https://picsum.photos/807",
+        "type":"image",
+        "likes" :9
+    },
+    {
+        "name": "rohan",
+        "image":"https://picsum.photos/808",
+        "postUrl":"https://picsum.photos/808",
+        "type":"image",
+        "likes" :167
+    },
+    {
+        "name": "milan",
+        "image":"https://picsum.photos/809",
+        "postUrl":"https://picsum.photos/809",
+        "type":"image",
+        "likes" :156
+    },
+    {
+        "name": "sahil",
+        "image":"https://picsum.photos/800",
+        "postUrl":"https://picsum.photos/800",
+        "type":"image",
+        "likes" :1009
+    },
+    {
+        "name": "Entertainment",
+        "image":"https://picsum.photos/800",
+        "postUrl":"https://d192a4z5wljn2.cloudfront.net/ervNPPeH/hoookedup/5702/Y0KLgnhIHh.mp4",
+        "type":"video",
+        "likes" :100
+    },
+    {
+        "name": "Entertainment",
+        "image":"https://picsum.photos/805",
+        "postUrl":"https://d192a4z5wljn2.cloudfront.net/ervNPPeH/hoookedup/5199/avvytpAUuY.mp4",
         "type":"video",
         "likes" :100
     },
