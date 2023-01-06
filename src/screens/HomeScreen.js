@@ -7,7 +7,7 @@ import feedData from '../Json/Feed.json'
 import storyData from '../Json/Stories.json'
 import StoryModal from '../components/StoryModal';
 
-const HomeScreen = ({ navigaiton }) => {
+const HomeScreen = () => {
 
     const [visible, setvisible] = useState(false)
     const [visibleStoryIndex, setvisibleStoryIndex] = useState()
@@ -73,6 +73,7 @@ const HomeScreen = ({ navigaiton }) => {
                         initialNumToRender={6}
                         maxToRenderPerBatch={2}
                         onEndReachedThreshold={0.1}
+                        bounces={false}
                     />
 
                 </View>
@@ -87,6 +88,7 @@ const HomeScreen = ({ navigaiton }) => {
                     initialNumToRender={2}
                     maxToRenderPerBatch={2}
                     onEndReachedThreshold={0.1}
+                    bounces={false}
                 />
             </ScrollView>
         </View>

@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View, FlatList, Image, TouchableOpacity, Dimensions } from 'react-native'
-import React, { useState, useRef, memo } from 'react'
+import React, { useState, useCallback, useRef, memo } from 'react'
 import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons'
 import Video from 'react-native-video'
 import InView from 'react-native-component-inview'
@@ -12,13 +12,14 @@ const hight = Dimensions.get('screen').height;
 
 const FeedCard = (props) => {
     const [isPaused, setisPaused] = useState(false);
+    const [isMute, setisMute] = useState(false)
 
     const item = props.data?.item;
     const index = props.data?.index;
 
-    const handleVideo = (isVisible) => {
+    const handleVideo = useCallback((isVisible) => {
         isVisible ? setisPaused(false) : setisPaused(true)
-    }
+    }, [])
 
     return (
         <View key={index}>
@@ -30,7 +31,6 @@ const FeedCard = (props) => {
                             uri: item?.image,
                             // cache: FastImage.cacheControl.cacheOnly,
                             // priority: FastImage.priority.low
-
                         }}
                         style={styles.profileImage}
 
@@ -58,25 +58,45 @@ const FeedCard = (props) => {
                     />
                 </View>
                 :
-                <InView onChange={(isVisible) => handleVideo(isVisible)}>
-                    <Video
-                        source={{ uri: item?.postUrl }}
-                        style={[styles.postImage, {}]}
-                        // ref={(ref) => {
-                        //     player = ref
-                        // }}
-                        paused={isPaused}
-                        rate={1.0}
-                        volume={1.0}
-                        muted={false}
-                        controls={false}
-                        repeat={true}
-                        resizeMode={'cover'}
-                        playInBackground={false}
-                        playWhenInactive={false}
-                        ignoreSilentSwitch={'ignore'}
-                        onError={(err) => console.error('Video Error', err)}
-                    />
+                <InView onChange={(isVisible) => handleVideo(isVisible)} collapsable={false}>
+                    <View>
+                        <Video
+                            source={{ uri: item?.postUrl }}
+                            style={styles.postImage}
+                            // ref={(ref) => {
+                            //     player = ref
+                            // }}
+                            paused={isPaused}
+                            rate={1.0}
+                            volume={1.0}
+                            muted={isMute}
+                            controls={false}
+                            repeat={false}
+                            resizeMode={'cover'}
+                            playInBackground={false}
+                            playWhenInactive={false}
+                            ignoreSilentSwitch={'ignore'}
+                            onError={(err) => console.error('Video Error', err)}
+                        />
+                        <View style={{ position: "absolute", bottom: 10, right: 10 }}>
+                            <TouchableOpacity style={styles.muteView} onPress={() => setisMute(!isMute)}>
+                                {isMute ?
+                                    <SimpleLineIcons
+                                        name='volume-off'
+                                        size={22}
+                                        color={'#FFFFFF'}
+                                    />
+                                    :
+                                    <SimpleLineIcons
+                                        name='volume-1'
+                                        size={22}
+                                        color={'#FFFFFF'}
+
+                                    />
+                                }
+                            </TouchableOpacity>
+                        </View>
+                    </View>
                 </InView>
             }
             {/* FooterView  */}
@@ -163,5 +183,13 @@ const styles = StyleSheet.create({
         marginTop: 5,
         color: 'grey',
         fontSize: 11
+    },
+    muteView: {
+        height: 35,
+        width: 35,
+        backgroundColor: '#00000060',
+        borderRadius: 40,
+        alignItems: "center",
+        justifyContent: 'center'
     }
 })

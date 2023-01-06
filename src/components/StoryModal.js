@@ -135,8 +135,8 @@ const styles = StyleSheet.create({
         justifyContent: "space-between",
         alignItems: "center",
         backgroundColor: '#00000040',
-        borderBottomRightRadius: 40,
-        borderTopLeftRadius: 20
+        borderBottomLeftRadius: 10,
+        borderBottomRightRadius: 10
     },
     nameView: {
         margin: 15,
